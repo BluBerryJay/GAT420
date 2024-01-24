@@ -7,6 +7,7 @@ TagManager:
   - Agent01
   - Agent02
   - Agent03
+  - Object
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - Spawn
   - Water
   - UI
-  - 
-  - 
+  - World
+  - NavNode
   - 
   - 
   - 

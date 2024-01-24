@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 8572593340243783222}
   - component: {fileID: 8398711161123814179}
   - component: {fileID: 5231965702527010733}
+  - component: {fileID: -4742655568176778641}
   - component: {fileID: 2132225429745869449}
+  - component: {fileID: 152063872900061119}
   - component: {fileID: 2385408103806796598}
   - component: {fileID: 3943882108326330215}
   m_Layer: 0
@@ -54,6 +56,7 @@ MonoBehaviour:
   seekPerception: {fileID: 8398711161123814179}
   fleePerception: {fileID: 3943882108326330215}
   flockPerception: {fileID: 2385408103806796598}
+  obstaclePerception: {fileID: 152063872900061119}
 --- !u!114 &8398711161123814179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,6 +72,9 @@ MonoBehaviour:
   tagName: Agent02
   distance: 5
   maxAngle: 45
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &5231965702527010733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,6 +91,25 @@ MonoBehaviour:
   minSpeed: 5
   maxForce: 5
   turnRate: 90
+--- !u!114 &-4742655568176778641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8023601624596171829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f9be131cc6e43342a1f65c0c2faff0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: Object
+  distance: 10
+  maxAngle: 80
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  numRaycast: 4
 --- !u!136 &2132225429745869449
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -108,6 +133,26 @@ CapsuleCollider:
   m_Height: 1.98
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &152063872900061119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8023601624596171829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6c5995f4b9f66418787045e7ceaf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: Object
+  distance: 5
+  maxAngle: 80
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  numRaycast: 11
+  radius: 0.28
 --- !u!114 &2385408103806796598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +168,9 @@ MonoBehaviour:
   tagName: Agent01
   distance: 8
   maxAngle: 180
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &3943882108326330215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +186,9 @@ MonoBehaviour:
   tagName: Agent02
   distance: 2
   maxAngle: 45
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1001 &4662033171145247056
 PrefabInstance:
   m_ObjectHideFlags: 0
