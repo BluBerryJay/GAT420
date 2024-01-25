@@ -293,7 +293,7 @@ MonoBehaviour:
   navNodePrefab: {fileID: 8370194794139212626}
   layerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 136
   active: 1
 --- !u!1 &1405683246
 GameObject:
@@ -474,8 +474,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512586218}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.644471, y: -50.451164, z: -26.761623}
+  m_LocalRotation: {x: -0.16967547, y: 0.8275176, z: -0.41151312, w: -0.34217212}
+  m_LocalPosition: {x: 12.583718, y: 18.273415, z: 11.464938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -508,6 +508,10 @@ PrefabInstance:
     - target: {fileID: 5525504886942256622, guid: 84dbeb24701d9be4f9f51bbe7fea90da, type: 3}
       propertyPath: m_Name
       value: NavNode
+      objectReference: {fileID: 0}
+    - target: {fileID: 5525504886942256622, guid: 84dbeb24701d9be4f9f51bbe7fea90da, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7297448281446110758, guid: 84dbeb24701d9be4f9f51bbe7fea90da, type: 3}
       propertyPath: m_LocalPosition.x

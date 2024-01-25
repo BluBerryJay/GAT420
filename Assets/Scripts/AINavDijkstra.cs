@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 public class AINavDijkstra
 {
-	public static bool Generate(AINavNode startNode, AINavNode endNode, List<AINavNode> path)
+	public static bool Generate(AINavNode startNode, AINavNode endNode, ref List<AINavNode> path)
 	{
 		var nodes = new SimplePriorityQueue<AINavNode>();
 		startNode.Cost = 0;
+
 		nodes.EnqueueWithoutDuplicates(startNode, startNode.Cost);
 		bool found = false;
 		while (!found && nodes.Count > 0)
@@ -25,6 +26,7 @@ public class AINavDijkstra
 				{
 					neighbor.Cost = cost;
 					neighbor.Parent = node;
+
 					nodes.EnqueueWithoutDuplicates(neighbor, cost);
 				}
 			}
